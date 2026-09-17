@@ -1,0 +1,25 @@
+[project]
+name = "mle-data-pipeline-project"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.5.0",
+    "dbt-postgres>=1.11.0",
+    "pandas>=3.0.5",
+    "prefect>=3.8.6",
+    "prefect-dbt>=0.7.25",
+    "prefect-sqlalchemy>=0.6.1",
+    "psycopg2-binary>=2.9.13",
+    "pyarrow>=25.0.1",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.0.53",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "pytest>=9.1.1",
+]
+
+[tool.ty.environment]
+root = [".", "solution/src"]
